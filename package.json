@@ -1,7 +1,16 @@
 {
-  "name": "modal-plugin",
-  "version": "0.1.0",
-  "private": true,
+  "name": "oc-modal-plugin",
+  "main": "dist/ValidationModal.tsx",
+  "module": "dist/ValidationModal.tsx",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ElisaROGGE/Elisa_Rogge_14_11102024-.git"
+  },
+  "version": "0.1.2",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
@@ -10,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "tsc",
+    "build": "babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -31,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
   }
 }
