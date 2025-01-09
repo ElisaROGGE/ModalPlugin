@@ -18,9 +18,6 @@ const ValidationModal: React.FC<ValidationModalProps> = ({isOpen, closeModal, ti
             closeModal();
         }
     };
-    isOpen = true;
-    title = "Success !"
-    buttonText = "Close"
 
     return (
         isOpen ? (
@@ -28,7 +25,7 @@ const ValidationModal: React.FC<ValidationModalProps> = ({isOpen, closeModal, ti
                 <div className='modal-container'>
                     <div className="modal-content">
                         <h2>{title}</h2>
-                        <div className='main-text'>Lorem ipsum</div>
+                        <div className='main-text'>{children}</div>
                         <button onClick={closeModal}>{buttonText}</button>
                     </div>
                 </div>
