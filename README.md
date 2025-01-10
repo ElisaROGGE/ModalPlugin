@@ -1,15 +1,16 @@
-## Modal Plugin
-![modal-plugin](https://github.com/user-attachments/assets/09012054-f459-477a-8fb0-56908b5a8171)
+# Modal Plugin
+![modal-plugin](https://github.com/user-attachments/assets/fa43e376-028c-42a4-9c63-08862cff9a49)
 
-## Installation
+# Installation
+
 
 The package can be installed via [npm](https://github.com/npm/cli):
 
 ```
-npm install react-datepicker --save
+npm install oc-modal-plugin
 ```
 
-## Available Scripts
+# Available Scripts
 
 In the project directory, you can run:
 
@@ -18,7 +19,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Configuration
+# Configuration
 
 The most basic use of the ModalPlugin can be achieved with the following example:
 
@@ -33,13 +34,14 @@ The most basic use of the ModalPlugin can be achieved with the following example
 
 ```
 
-## Available props
+# Available props
 
-# title (string):
+## title (string):
 The title of the modal. This is typically displayed prominently at the top of the modal.
 
-# children (ReactNode):
+## children (string or ReactNode):
 The content to display inside the modal. This can be plain text, HTML, or even other React components. You can use this to fully customize the modal's content.
+
 Example of customizing with components:
 ```js
 <ValidationModal
@@ -57,24 +59,25 @@ Example of customizing with components:
 
 ```
 
-# buttonText (string):
+## buttonText (string):
 Text displayed on the modal's action button. This allows you to control the label for user interaction (e.g., "Close", "Confirm", "Okay").
 
-# isOpen (boolean):
+## isOpen (boolean):
 A flag indicating whether the modal is open or closed. This is typically managed through state in the parent component.
+
 Example:
 ```js
 const [openModal, setOpenModal] = useState(false);
 ```
 
-# closeModal (function):
+## closeModal (function):
 A callback function triggered when the modal's close button or overlay is clicked. Typically used to toggle the state of isOpen.
 
-## Example with State Management
+# Example with State Management
 
 ```js
 import { useState } from "react";
-import ValidationModal from "your-modal-plugin";
+import ValidationModal from "oc-modal-plugin";
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
